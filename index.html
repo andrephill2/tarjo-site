@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tarjo — tratamento e proteção de dados em documentos</title>
+<meta name="description" content="Tarjo tarja dados pessoais em documentos públicos (LAI e LGPD): detecção contextual, rosto, assinatura e QR, remoção definitiva verificada, laudo, API e proxy de publicação. Processado no Brasil.">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="site.css">
+</head>
+<body>
+
+<header class="nav">
+  <a class="marca" href="/"><img src="icon.svg" alt=""> Tarjo</a><span class="selo-br"><svg class="br" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="2" fill="#2e9e4f"/><path d="M10 1.6 18.4 7 10 12.4 1.6 7z" fill="#f2c400"/><circle cx="10" cy="7" r="3" fill="#1f3d6b"/><path d="M7.4 6.4c1.8-.6 3.6-.3 5.2.8" stroke="#fff" stroke-width=".6" fill="none"/></svg> Software brasileiro</span>
+  <nav>
+    <a href="#como">Como funciona</a>
+    <a href="#lab">Verificação</a>
+    <a href="#seguranca">Segurança</a>
+    <a href="#planos">Planos</a><a href="#radar">Radar</a>
+    <a href="#contato">Contato</a>
+    <a class="btn ghost" href="https://app.tarjo.com.br/entrar">Entrar</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">LAI · LGPD · órgãos públicos</span>
+      <h1>Publique tudo. <em>Exponha ninguém.</em></h1>
+      <p class="lead">O Tarjo encontra e remove definitivamente dados pessoais em documentos públicos — CPF, nome, endereço, rosto, assinatura, QR Code — e devolve um PDF pesquisável, com laudo verificável e trilha de auditoria. Processado no Brasil, sem treinar modelo com os seus dados.</p>
+      <div class="cta">
+        <a class="btn amber" href="#contato">Pedir demonstração</a>
+        <a class="btn ghost" href="#lab">Ver os testes ao vivo</a>
+      </div>
+      <p class="cta-note"><svg class="br" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="2" fill="#2e9e4f"/><path d="M10 1.6 18.4 7 10 12.4 1.6 7z" fill="#f2c400"/><circle cx="10" cy="7" r="3" fill="#1f3d6b"/><path d="M7.4 6.4c1.8-.6 3.6-.3 5.2.8" stroke="#fff" stroke-width=".6" fill="none"/></svg> Desenvolvido e processado no Brasil · remoção vetorial (não vira imagem) · IA contextual em português · roda no seu servidor ou em nuvem brasileira</p>
+    </div>
+    <div class="janela">
+      <div class="barra"><i></i><i></i><i></i></div>
+      <div class="doc">
+        <div class="t">PROCESSO ADMINISTRATIVO Nº 073/2026 — VISTA AO SOLICITANTE</div>
+        Sede: SIBS Quadra 02, Conjunto A, Lote 03 — Brasília/DF<br>
+        Requerente: <span class="tj n1">Maria Aparecida dos Santos</span>, CPF <span class="tj n2">529.982.247-25</span>, telefone <span class="tj n3">(61) 99876-5432</span>,<br>
+        residente na <span class="tj n4">Rua das Acácias, 120, apto 302, Águas Claras</span>.<br>
+        Testemunha: <span class="tj n5">Carlos Eduardo Lima</span>, nascido em <span class="tj n5">12/03/1985</span>.<br>
+        Empresa contratada: Horizonte Tecnologia Ltda, CNPJ 11.222.333/0001-81.<br>
+        <span class="ok">✓ endereço institucional preservado · 6 dados pessoais removidos · verificado</span>
+        <div class="laudo">laudo · sha256 fef386…→ 0718b9…</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="como" class="paper">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Como funciona</span>
+      <h2>Três passos entre o pedido de acesso <em>e a resposta.</em></h2>
+      <p class="lead">Sem treinar ninguém por semanas. Quem sabe ler um processo sabe usar o Tarjo.</p>
+    </div>
+    <div class="passos">
+      <div class="passo"><span class="passo-no">01</span><h3>Enviar</h3><p>PDF, DOCX, XLSX ou MP4 — pela tela, pela API, em lote, pela extensão do Chrome ou direto do Drive/OneDrive. Se faltar texto, o OCR entra sozinho. O documento já abre enquanto a detecção roda.</p><div class="passo-linha"></div></div>
+      <div class="passo"><span class="passo-no">02</span><h3>Revisar</h3><p>As tarjas chegam propostas, agrupadas <b>por pessoa</b>: "Maria: CPF, telefone, endereço". Cada uma diz por que foi marcada. Você aceita, rejeita ou protege o mesmo dado no documento inteiro com uma tecla.</p><div class="passo-linha"></div></div>
+      <div class="passo"><span class="passo-no">03</span><h3>Entregar</h3><p>Um botão remove o conteúdo do arquivo de forma irreversível, verifica por extração de texto e entrega: PDF ou PDF/A, link com validade, e-mail, WhatsApp — com o <b>laudo assinado digitalmente</b> como última página.</p></div>
+    </div>
+  </div>
+</section>
+
+<hr class="divisor">
+
+<section id="telas">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Por dentro</span>
+      <h2>O sistema, <em>de verdade.</em></h2>
+      <p class="lead">Não é mockup. São telas reais do Tarjo em uso.</p>
+    </div>
+    <div class="shot-frame"><img src="screens/revisao.jpg" alt="Tela de revisão do Tarjo: PDF com tarjas propostas, painel por pessoa e barra de ferramentas" loading="lazy" width="1380" height="868"></div>
+    <p class="shot-cap">Revisão — o PDF é a tela. Painel por pessoa à esquerda, a decisão sobre cada tarja (aceitar, não é dado, proteger igual) e o motivo da detecção.</p>
+    <div class="shot-grid">
+      <div><div class="shot-frame"><img src="screens/chegada.jpg" alt="Tela inicial do Tarjo: o que você quer proteger" loading="lazy" width="1380" height="868"></div><p class="shot-cap">Chegada — uma pergunta e um botão. Solte o arquivo em qualquer lugar da tela.</p></div>
+      <div><div class="shot-frame"><img src="screens/entregar.jpg" alt="Painel Entregar do Tarjo com laudo assinado, formatos e destinos" loading="lazy" width="1380" height="868"></div><p class="shot-cap">Entregar — formato, laudo assinado, destino e o texto de resposta ao pedido LAI, num painel só.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="quem" class="paper">
+  <div class="wrap quem-grid">
+    <div>
+      <span class="eyebrow">Quem pode usar</span>
+      <h2>Feito para quem tem dever <em>de publicar.</em></h2>
+      <p class="lead">Qualquer órgão ou entidade sujeito à LAI e à LGPD pode contratar o Tarjo. Também serve a empresas privadas que respondem a titulares de dados.</p>
+      <ul class="elegiveis">
+        <li>Administração direta — ministérios, secretarias, prefeituras</li>
+        <li>Autarquias e fundações públicas</li>
+        <li>Conselhos de fiscalização profissional (federais e regionais)</li>
+        <li>Câmaras, Assembleias, Senado e Câmara dos Deputados</li>
+        <li>Tribunais, Ministérios Públicos e Defensorias</li>
+        <li>Tribunais e Conselhos de Contas</li>
+        <li>Empresas públicas e sociedades de economia mista</li>
+        <li>Universidades e institutos federais e estaduais</li>
+        <li>Empresas privadas — atendimento a titulares (LGPD, art. 18)</li>
+      </ul>
+      <div class="cx contratar"><h4>Como contratar</h4><p>Serviço de TIC em nuvem (SaaS): pregão eletrônico, dispensa por valor (Lei 14.133/2021, art. 75, I e II) ou adesão a ata de registro de preços. Instalação no servidor do órgão também é possível. Proposta, planilha de custos e matriz de atendimento ao TR prontas para o processo.</p></div>
+    </div>
+    <figure class="foto"><img src="https://images.unsplash.com/photo-1749092042994-618ea2d25c87?w=1100&q=75&auto=format&fit=crop" alt="Congresso Nacional, Brasília" loading="lazy"><figcaption>Congresso Nacional, Brasília · foto: Fabian Lozano / Unsplash</figcaption></figure>
+  </div>
+</section>
+
+<section id="lab">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Verificação pública</span>
+      <h2>Não acredite na promessa. <em>Rode o teste.</em></h2>
+      <p class="lead">Dez verificações objetivas do que o Tarjo faz com um documento: contexto, OCR, imagem, revisão, irreversibilidade, regras, API, desempenho, publicação e lote. Cada botão executa agora, neste servidor, sobre documentos sintéticos — e mostra o resultado com o laudo.</p>
+    </div>
+    <div class="lab" id="labGrid"></div>
+    <p class="cta-note" style="margin-top:18px">Nenhum documento real é usado. Resultados e arquivos são gerados na hora; V4, V9 e V10 são roteiros guiados (visualizador, proxy de publicação e lote).</p>
+  </div>
+</section>
+
+<section id="seguranca" class="paper">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Segurança</span>
+      <h2>O documento sai limpo. <em>O dado nunca sai do país.</em></h2>
+      <p class="lead">Remover é diferente de cobrir. O Tarjo reescreve o arquivo sem o conteúdo tarjado, prova isso por extração de texto e registra tudo — quem, quando, o quê.</p>
+    </div>
+    <div class="grade">
+      <div class="cx"><h4>Irreversível de verdade</h4><p>Texto, vetores e o trecho da imagem sob a tarja são removidos do PDF. A verificação automática tenta recuperar cada valor e só libera o arquivo quando nada volta.</p></div>
+      <div class="cx"><h4>Laudo assinado por documento</h4><p>Hash de entrada e de saída, tarjas por tipo, páginas com OCR, endereços institucionais preservados, quem revisou e quando — assinado com certificado ICP-Brasil (PAdES). Sem certificado, o laudo não é emitido.</p></div>
+      <div class="cx"><h4>Trilha de auditoria completa</h4><p>Envio, processamento, cada tarja salva, exportação, downloads, links abertos, compartilhamentos, mudanças de regras e de usuários.</p></div>
+      <div class="cx"><h4>Seus dados são seus</h4><p>Modelos fixos, execução local, sem chamadas externas obrigatórias, sem treinamento com os seus documentos. Exportação integral em ZIP a qualquer momento.</p></div>
+      <div class="cx"><h4>Acesso sob controle</h4><p>Perfis Operador, Gestor e Administrador com permissões finas; senha, código por e-mail, Entra ID, SAML ou LDAP; usuários ilimitados.</p></div>
+      <div class="cx"><h4>Proxy de publicação fail-closed</h4><p>O site do órgão continua igual; quem baixa um PDF recebe a versão tarjada. Se o serviço cair, o original nunca é exposto.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="conformidade">
+  <div class="wrap conf-grid">
+    <figure class="foto"><img src="https://images.unsplash.com/photo-1583521214690-73421a1829a9?w=1100&q=75&auto=format&fit=crop" alt="Pilhas de documentos e pastas de arquivo" loading="lazy"><figcaption>foto: Wesley Tingey / Unsplash</figcaption></figure>
+    <div>
+      <span class="eyebrow">Conformidade legal</span>
+      <h2>Cada função responde <em>a um artigo.</em></h2>
+      <p class="lead">O Tarjo foi desenhado a partir do que a lei exige de quem publica documento público — não o contrário.</p>
+      <table class="leis">
+        <tr><th>Norma</th><th>O que exige</th><th>Como o Tarjo atende</th></tr>
+        <tr><td>LAI — Lei 12.527/2011, art. 7º, §2º</td><td>Acesso à parte não sigilosa do documento, com ocultação da parte protegida</td><td>Remoção vetorial só do trecho pessoal; o resto fica íntegro e pesquisável</td></tr>
+        <tr><td>LAI, art. 31 · Decreto 7.724/2012, arts. 55–62</td><td>Informação pessoal com acesso restrito por 100 anos, salvo consentimento ou previsão legal</td><td>Detecção de CPF, RG, endereço, telefone, nascimento, rosto e assinatura; endereço institucional preservado</td></tr>
+        <tr><td>LGPD — Lei 13.709/2018, arts. 6º, 7º e 23</td><td>Tratamento pelo poder público com finalidade, necessidade e transparência</td><td>Regras por órgão, revisão humana registrada, laudo com base legal por documento</td></tr>
+        <tr><td>LGPD, art. 37</td><td>Registro das operações de tratamento</td><td>Trilha de auditoria completa e exportável</td></tr>
+        <tr><td>LGPD, art. 46</td><td>Medidas de segurança contra acesso não autorizado</td><td>Perfis e SSO, execução no ambiente do órgão, sem treinamento com os dados, hashes de integridade</td></tr>
+        <tr><td>MP 2.200-2/2001 · ICP-Brasil</td><td>Validade jurídica de documento assinado digitalmente</td><td>Laudo e entrega assinados em PAdES com certificado do órgão</td></tr>
+        <tr><td>Lei 14.133/2021 · IN SGD/ME 94/2022</td><td>Contratação de solução de TIC pela administração</td><td>Modelo SaaS ou instalado, matriz de atendimento ao TR, ETP e proposta prontos</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section id="planos" class="paper">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Planos</span>
+      <h2>Simples de contratar. <em>Sem surpresa no fim do mês.</em></h2>
+      <p class="lead">Preço por franquia de páginas, usuários ilimitados a partir do plano Órgão, tudo incluído. Valores em reais, por mês, com contrato anual.</p>
+    </div>
+    <div class="planos">
+      <div class="plano"><span class="tag">Essencial</span><div class="preco">R$ 1.490<small>/mês</small></div><div class="preco-sub">10 mil páginas por mês · R$ 17.880/ano</div><ul><li>Conselho regional, câmara, fundação</li><li>3 usuários nomeados</li><li>Revisão, laudo assinado, PDF/A, links</li><li>Suporte em horário comercial</li></ul><a class="btn ghost" href="#contato">Falar com a gente</a></div>
+      <div class="plano destaque"><span class="tag">Órgão</span><div class="preco">R$ 3.490<small>/mês</small></div><div class="preco-sub">50 mil páginas por mês · R$ 41.880/ano</div><ul><li>Usuários ilimitados</li><li>API, lote, proxy de publicação, extensão</li><li>SSO (Entra ID, SAML, LDAP)</li><li>Nuvem: Drive, OneDrive, Box, Dropbox</li><li>Suporte 8×5 com SLA</li></ul><a class="btn amber" href="#contato">Pedir proposta</a></div>
+      <div class="plano"><span class="tag">Federal</span><div class="preco">R$ 5.400<small>/mês</small></div><div class="preco-sub">150 mil páginas por mês · R$ 64.800/ano</div><ul><li>Tudo do Órgão</li><li>SLA 1h/4h · disponibilidade 99,5%</li><li>Instalação no servidor do órgão</li><li>Curso com certificado para a equipe</li><li>Gerente de conta</li></ul><a class="btn ghost" href="#contato">Falar com a gente</a></div>
+    </div>
+    <p class="planos-nota">Excedente só com autorização prévia: R$ 0,04 por página, em pacotes de 25 mil. <b>Pacote Eleição</b> (20 mil páginas por 90 dias) para conselhos e entidades de classe: R$ 3.900.</p>
+  </div>
+</section>
+
+<section id="radar">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Radar</span>
+      <h2>O que muda no país <em>e mexe com o seu documento.</em></h2>
+      <p class="lead">Leis, decisões e infraestrutura que afetam quem publica, guarda e protege dados no Brasil.</p>
+    </div>
+    <div class="noticias" id="noticias"></div>
+  </div>
+</section>
+
+<section id="contato" class="paper">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow">Contato</span>
+      <h2>Uma demonstração de <em>30 minutos</em> com um documento seu.</h2>
+      <p class="lead">Traga um processo real: a gente tarja na hora, no ambiente de homologação, e você leva o laudo.</p>
+    </div>
+    <form class="form" id="form">
+      <label>Nome <input name="nome" required></label>
+      <label>E-mail institucional <input name="email" type="email" required></label>
+      <label class="full">Órgão / empresa <input name="orgao"></label>
+      <label class="full">Mensagem <textarea name="mensagem" rows="3" placeholder="Ex.: somos um conselho regional e precisamos tarjar processos éticos para vista"></textarea></label>
+      <div class="full"><button class="btn amber" type="submit">Enviar</button> <span id="formMsg" style="margin-left:10px;font-size:14px"></span></div>
+    </form>
+  </div>
+</section>
+
+<footer><div class="wrap"><span><span class="marca" style="font-size:16px">Tarjo</span> · <svg class="br" viewBox="0 0 20 14" aria-hidden="true"><rect width="20" height="14" rx="2" fill="#2e9e4f"/><path d="M10 1.6 18.4 7 10 12.4 1.6 7z" fill="#f2c400"/><circle cx="10" cy="7" r="3" fill="#1f3d6b"/><path d="M7.4 6.4c1.8-.6 3.6-.3 5.2.8" stroke="#fff" stroke-width=".6" fill="none"/></svg> software brasileiro, feito em Brasília</span><span><a href="#lab">Verificação</a> · <a href="https://app.tarjo.com.br/entrar">Entrar</a> · <a href="https://github.com/andrephill2/tarjo">GitHub</a></span></div></footer>
+
+<script>
+const grid = document.getElementById('labGrid');
+const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+let TESTES = [];
+function render(resultados = {}) {
+  grid.innerHTML = TESTES.map((t) => { const r = resultados[t.id] || {}; const cls = r.aprovado === true ? 'ok' : r.aprovado === false ? 'falhou' : ''; return `<div class="teste ${cls}" id="${t.id}"><span class="id">${t.id}${r.duracaoMs ? ` · ${(r.duracaoMs / 1000).toFixed(1)} s` : ''}</span><h4>${esc(t.titulo)}</h4><p>${esc(t.procedimento)}</p><p><b>Aceite:</b> ${esc(t.aceite)}</p><div class="res" id="res-${t.id}">${resumo(r)}</div><div class="acoes">${r.manual === undefined && !['V4', 'V9', 'V10'].includes(t.id) ? `<button class="btn amber" data-run="${t.id}">Rodar agora</button>` : `<button class="btn" data-run="${t.id}">Ver roteiro</button>`}${t.id === 'V3' ? '<label class="btn">Com minha foto <input type="file" accept="image/*" data-foto="V3" hidden></label>' : ''}${r.temEntrada || ['V1', 'V2', 'V3', 'V5', 'V6', 'V8'].includes(t.id) ? `<a class="btn" href="/api/lab/${t.id}/entrada">entrada.pdf</a>` : ''}${r.temSaida ? `<a class="btn" href="/api/lab/${t.id}/saida">saída.pdf</a>` : ''}</div></div>`; }).join('');
+}
+function resumo(r) {
+  if (!r || !r.id) return '';
+  if (r.manual) return r.roteiro.map((l, i) => `${i + 1}. ${l}`).join('\n');
+  const partes = [];
+  if (r.aprovado != null) partes.push(r.aprovado ? '✓ APROVADO' : '✗ REPROVADO');
+  if (r.paginas) partes.push(`${r.paginas} páginas`);
+  if (r.achados) partes.push(`${r.achados.length} tarjas: ` + [...new Set(r.achados.map((a) => a.tipo))].join(', '));
+  if (r.preservados && r.preservados.length) partes.push(`preservados: ${r.preservados.map((p) => p.texto).join(' | ')}`);
+  if (r.ocr && r.ocr.length) partes.push(`OCR em ${r.ocr.length} página(s)`);
+  if (r.verificacao) partes.push(`verificação: ${r.verificacao.ok ? 'nada recuperável' : 'VAZAMENTO'} (${r.verificacao.testados} testados)`);
+  if (r.texto) partes.push(`texto: ${r.texto}`);
+  if (r.relatorio) partes.push(r.relatorio.map((x) => `${x.rotulo}=${x.valor}`).join(', '));
+  if (r.roteiro) partes.push(r.roteiro.join('\n'));
+  if (r.obs) partes.push(r.obs);
+  return partes.join('\n');
+}
+async function carregar() { try { const j = await (await fetch('https://app.tarjo.com.br/api/lab')).json(); TESTES = j.testes; render(j.resultados); } catch { grid.innerHTML = '<p class="cta-note">O laboratório roda no servidor do Tarjo e entra no ar junto com o aplicativo. Enquanto isso, peça uma demonstração.</p>'; } }
+grid.addEventListener('click', async (e) => {
+  const b = e.target.closest('[data-run]'); if (!b) return;
+  const id = b.dataset.run; const el = document.getElementById('res-' + id); el.textContent = 'rodando…'; b.disabled = true;
+  try { const j = await (await fetch(`https://app.tarjo.com.br/api/lab/${id}/rodar`, { method: 'POST' })).json(); if (!j.ok) throw new Error(j.erro); const r = await (await fetch('https://app.tarjo.com.br/api/lab')).json(); render(r.resultados); document.getElementById(id).scrollIntoView({ block: 'nearest' }); } catch (x) { el.textContent = 'erro: ' + x.message; b.disabled = false; }
+});
+grid.addEventListener('change', async (e) => {
+  const f = e.target.closest('[data-foto]'); if (!f || !f.files[0]) return;
+  const el = document.getElementById('res-V3'); el.textContent = 'rodando com a sua foto (não é armazenada)…';
+  try { const j = await (await fetch('https://app.tarjo.com.br/api/lab/V3/rodar', { method: 'POST', headers: { 'Content-Type': f.files[0].type || 'image/jpeg' }, body: f.files[0] })).json(); if (!j.ok) throw new Error(j.erro); const r = await (await fetch('https://app.tarjo.com.br/api/lab')).json(); render(r.resultados); } catch (x) { el.textContent = 'erro: ' + x.message; }
+});
+carregar();
+document.getElementById('form').onsubmit = async (e) => { e.preventDefault(); const fd = new FormData(e.target); const m = document.getElementById('formMsg'); m.textContent = 'enviando…'; try { const r = await fetch('https://app.tarjo.com.br/api/contato', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(Object.fromEntries(fd)) }); if (!r.ok) throw new Error(); m.textContent = 'Recebido. Respondemos em até um dia útil.'; e.target.reset(); } catch { const corpo = `Nome: ${fd.get('nome')}
+E-mail: ${fd.get('email')}
+Órgão: ${fd.get('orgao')}
+
+${fd.get('mensagem')}`; location.href = 'mailto:contato@tarjo.com.br?subject=' + encodeURIComponent('Demonstração do Tarjo — ' + (fd.get('orgao') || fd.get('nome'))) + '&body=' + encodeURIComponent(corpo); m.textContent = 'Abrindo o seu e-mail…'; } };
+/* Radar — edite esta lista para publicar uma notícia (mais recente primeiro) */
+const NOTICIAS = [
+  { data: '2026-09-01', tag: 'Infraestrutura', titulo: 'Conheça o Redata: Senado aprova regime especial para data centers no Brasil', texto: 'O PL 278/2026 cria o Regime Especial de Tributação para Serviços de Data Center (Redata): suspensão de Imposto de Importação, IPI e PIS/Cofins na compra de equipamentos para centros de dados instalados no país. Aprovado pela Câmara em fevereiro e pelo Senado em 1º de setembro, seguiu à sanção. Para quem trata dado público, significa mais capacidade de processar e guardar documentos dentro do território nacional.', link: 'https://www12.senado.leg.br/noticias/materias/2026/09/01/incentivo-para-instalacao-de-data-centers-no-brasil-e-aprovado-pelo-senado', fonte: 'Agência Senado' },
+];
+document.getElementById('noticias').innerHTML = NOTICIAS.map((n) => `<article class="noticia"><div class="noticia-meta"><span class="noticia-tag">${esc(n.tag)}</span><time datetime="${esc(n.data)}">${new Date(n.data + 'T12:00:00').toLocaleDateString('pt-BR', { day: '2-digit', month: 'long', year: 'numeric' })}</time></div><h3>${esc(n.titulo)}</h3><p>${esc(n.texto)}</p>${n.link ? `<a href="${esc(n.link)}" target="_blank" rel="noopener">Ler na fonte${n.fonte ? ' · ' + esc(n.fonte) : ''} →</a>` : ''}</article>`).join('') || '<p class="cta-note">Em breve.</p>';
+</script>
+</body>
+</html>

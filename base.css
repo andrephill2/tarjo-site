@@ -1,0 +1,64 @@
+/* Tarjo — base visual corporativa: Nunito no corpo e no nome, Fraunces nos títulos do site,
+   azul-marinho sobre papel frio (claro) ou sobre tinta azul (escuro). */
+@font-face { font-family: 'Pixelify Sans'; font-weight: 400; src: url(fonts/PixelifySans-400-latin.woff2) format('woff2'); font-display: swap; }
+@font-face { font-family: 'Pixelify Sans'; font-weight: 700; src: url(fonts/PixelifySans-700-latin.woff2) format('woff2'); font-display: swap; }
+@font-face { font-family: 'Nunito'; font-weight: 400; src: url(fonts/Nunito-400-latin.woff2) format('woff2'); font-display: swap; }
+@font-face { font-family: 'Nunito'; font-weight: 600; src: url(fonts/Nunito-600-latin.woff2) format('woff2'); font-display: swap; }
+@font-face { font-family: 'Nunito'; font-weight: 700; src: url(fonts/Nunito-700-latin.woff2) format('woff2'); font-display: swap; }
+@font-face { font-family: 'Nunito'; font-weight: 800; src: url(fonts/Nunito-800-latin.woff2) format('woff2'); font-display: swap; }
+
+:root {
+  --r-xs: 4px; --r-sm: 7px; --radius: 10px; --r-lg: 14px;
+  --fs-xs: 11px; --fs-sm: 12px; --fs-md: 13px; --fs-lg: 15px;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1); --fast: 130ms; --med: 220ms;
+  --font: Nunito, "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
+  --font-marca: Nunito, "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
+  --font-display: 'Fraunces', Georgia, serif;
+  --mono: "Cascadia Mono", Consolas, ui-monospace, monospace;
+  --shadow-pill: 0 1px 2px rgba(0, 0, 0, .18), 0 8px 28px rgba(0, 0, 0, .28);
+  /* tema "papel" (claro) — padrão no serviço: cinza-azulado frio, marinho como acento */
+  --bg: #eef1f5; --stage: #e2e6ed; --surface: #ffffff; --surface-2: #f3f5f9; --surface-3: #e7ebf2; --line: #d4dae5;
+  --text: #1a2433; --text-dim: #5b6779; --text-faint: #6f7b8e;
+  --accent: #1f3d6b; --accent-ink: #ffffff; --accent-soft: rgba(31, 61, 107, .12);
+  --page-shadow: 0 1px 2px rgba(20, 35, 60, .14), 0 8px 26px rgba(20, 35, 60, .14);
+  --scroll-thumb: #b9c2d1; --danger: #b8433f; --ok: #2f8a4f; --warn: #b3780f;
+  --g-ambar: #b07a12; --g-azul: #1f3d6b; --g-verde: #2f8a4f; --g-roxo: #6d4fb8; --g-ciano: #1f8c93; --g-laranja: #c2662a; --g-vermelho: #b8433f; --g-indigo: #3f52a8; --g-cinza: #5b6779;
+  --tarja: #10161f;
+}
+:root[data-tema="tinta"] {
+  --bg: #0c1424; --stage: #070d19; --surface: #121c30; --surface-2: #182540; --surface-3: #1f2e4d; --line: #253651;
+  --text: #e6ebf3; --text-dim: #9aa8bd; --text-faint: #7d8ba1;
+  --accent: #7fb0e8; --accent-ink: #0b1526; --accent-soft: rgba(127, 176, 232, .16);
+  --page-shadow: 0 1px 2px rgba(0, 0, 0, .5), 0 10px 30px rgba(0, 0, 0, .45);
+  --scroll-thumb: #34456a; --danger: #e07a72; --ok: #6cba7d; --warn: #e0b04a;
+  --g-ambar: #e0b04a; --g-azul: #7fb0e8; --g-verde: #6cba7d; --g-roxo: #b48be8; --g-ciano: #5fc4c8; --g-laranja: #e8925a; --g-vermelho: #e07a72; --g-indigo: #8f9cf0; --g-cinza: #8a93a3;
+  --tarja: #05080f;
+}
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { color-scheme: light; }
+:root[data-tema="tinta"] { color-scheme: dark; }
+body { margin: 0; background: var(--bg); color: var(--text); font: 14px/1.5 var(--font); -webkit-font-smoothing: antialiased; }
+a { color: var(--accent); }
+::selection { background: var(--accent-soft); }
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-thumb { background: var(--scroll-thumb); border-radius: 99px; border: 2px solid transparent; background-clip: padding-box; }
+.marca { font-family: var(--font-marca); font-weight: 800; font-size: 19px; letter-spacing: -.2px; color: var(--text); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
+.marca img { width: 26px; height: 26px; border-radius: 7px; }
+.btn { font: 600 var(--fs-md)/1 var(--font); padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--text); cursor: pointer; transition: background var(--fast) var(--ease), border-color var(--fast) var(--ease), transform var(--fast) var(--ease); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.btn:hover { border-color: var(--text-faint); background: var(--surface-2); }
+.btn:active { transform: translateY(1px); }
+.btn.primario, .btn.is-primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.btn.primario:hover { filter: brightness(1.06); }
+.btn.on { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+.btn.perigo { color: var(--danger); }
+.btn[disabled] { opacity: .5; cursor: default; }
+input, select, textarea { font: inherit; padding: 8px 10px; border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--surface); color: var(--text); }
+input:focus, select:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+.mono, code, pre { font-family: var(--mono); font-size: 12.5px; }
+.pill { display: inline-block; font-size: var(--fs-xs); font-weight: 600; padding: 2px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--text-dim); white-space: nowrap; }
+.pill.ok { background: rgba(61,138,82,.14); color: var(--ok); border-color: transparent; }
+.pill.warn { background: rgba(176,122,18,.14); color: var(--warn); border-color: transparent; }
+.pill.crit { background: rgba(184,84,63,.14); color: var(--danger); border-color: transparent; }
+.pill.acc { background: var(--accent-soft); color: var(--accent); border-color: transparent; }
+.tarja { display: inline-block; width: 22px; height: 12px; background: var(--tarja); border-radius: 3px; vertical-align: -1px; }

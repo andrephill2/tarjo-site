@@ -1,38 +1,37 @@
-/* Tarjo — base visual corporativa: Nunito no corpo e no nome, Fraunces nos títulos do site,
-   azul-marinho sobre papel frio (claro) ou sobre tinta azul (escuro). */
-@font-face { font-family: 'Pixelify Sans'; font-weight: 400; src: url(fonts/PixelifySans-400-latin.woff2) format('woff2'); font-display: swap; }
-@font-face { font-family: 'Pixelify Sans'; font-weight: 700; src: url(fonts/PixelifySans-700-latin.woff2) format('woff2'); font-display: swap; }
-@font-face { font-family: 'Nunito'; font-weight: 400; src: url(fonts/Nunito-400-latin.woff2) format('woff2'); font-display: swap; }
-@font-face { font-family: 'Nunito'; font-weight: 600; src: url(fonts/Nunito-600-latin.woff2) format('woff2'); font-display: swap; }
-@font-face { font-family: 'Nunito'; font-weight: 700; src: url(fonts/Nunito-700-latin.woff2) format('woff2'); font-display: swap; }
-@font-face { font-family: 'Nunito'; font-weight: 800; src: url(fonts/Nunito-800-latin.woff2) format('woff2'); font-display: swap; }
+/* Tarjo — fundamentos (nova direção, 25/09/2026): uma cor só (marinho na ação principal), tinta, papel e linha;
+   Schibsted Grotesk em tudo, IBM Plex Mono só para CPF, hash, chave e regex. Borda antes de sombra; sombra só no que flutua. */
+@font-face { font-family: 'Schibsted Grotesk'; font-weight: 400 800; src: url(fonts/SchibstedGrotesk-latin.woff2) format('woff2'); font-display: swap; unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD; }
+@font-face { font-family: 'Schibsted Grotesk'; font-weight: 400 800; src: url(fonts/SchibstedGrotesk-latin-ext.woff2) format('woff2'); font-display: swap; unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF; }
+@font-face { font-family: 'IBM Plex Mono'; font-weight: 400; src: url(fonts/IBMPlexMono-400-latin.woff2) format('woff2'); font-display: swap; unicode-range: U+0000-00FF, U+2000-206F, U+20AC, U+2122, U+2212; }
+@font-face { font-family: 'IBM Plex Mono'; font-weight: 400; src: url(fonts/IBMPlexMono-400-latin-ext.woff2) format('woff2'); font-display: swap; unicode-range: U+0100-02BA, U+02BD-02C5, U+1E00-1E9F; }
+@font-face { font-family: 'IBM Plex Mono'; font-weight: 500 700; src: url(fonts/IBMPlexMono-500-latin.woff2) format('woff2'); font-display: swap; unicode-range: U+0000-00FF, U+2000-206F, U+20AC, U+2122, U+2212; }
+@font-face { font-family: 'IBM Plex Mono'; font-weight: 500 700; src: url(fonts/IBMPlexMono-500-latin-ext.woff2) format('woff2'); font-display: swap; unicode-range: U+0100-02BA, U+02BD-02C5, U+1E00-1E9F; }
 
 :root {
-  --r-xs: 4px; --r-sm: 7px; --radius: 10px; --r-lg: 14px;
-  --fs-xs: 11px; --fs-sm: 12px; --fs-md: 13px; --fs-lg: 15px;
-  --ease: cubic-bezier(0.22, 0.61, 0.36, 1); --fast: 130ms; --med: 220ms;
-  --font: Nunito, "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
-  --font-marca: Nunito, "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
-  --font-display: 'Fraunces', Georgia, serif;
-  --mono: "Cascadia Mono", Consolas, ui-monospace, monospace;
-  --shadow-pill: 0 1px 2px rgba(0, 0, 0, .18), 0 8px 28px rgba(0, 0, 0, .28);
-  /* tema "papel" (claro) — padrão no serviço: cinza-azulado frio, marinho como acento */
-  --bg: #eef1f5; --stage: #e2e6ed; --surface: #ffffff; --surface-2: #f3f5f9; --surface-3: #e7ebf2; --line: #d4dae5;
-  --text: #1a2433; --text-dim: #5b6779; --text-faint: #6f7b8e;
-  --accent: #1f3d6b; --accent-ink: #ffffff; --accent-soft: rgba(31, 61, 107, .12);
-  --page-shadow: 0 1px 2px rgba(20, 35, 60, .14), 0 8px 26px rgba(20, 35, 60, .14);
-  --scroll-thumb: #b9c2d1; --danger: #b8433f; --ok: #2f8a4f; --warn: #b3780f;
-  --g-ambar: #b07a12; --g-azul: #1f3d6b; --g-verde: #2f8a4f; --g-roxo: #6d4fb8; --g-ciano: #1f8c93; --g-laranja: #c2662a; --g-vermelho: #b8433f; --g-indigo: #3f52a8; --g-cinza: #5b6779;
-  --tarja: #10161f;
+  --r-xs: 2px; --r-sm: 3px; --radius: 4px; --r-lg: 6px;
+  --fs-xs: 12px; --fs-sm: 13px; --fs-md: 14px; --fs-lg: 15px;
+  --ease: cubic-bezier(0.22, 0.61, 0.36, 1); --fast: 120ms; --med: 200ms;
+  --font: 'Schibsted Grotesk', "Segoe UI Variable Text", "Segoe UI", system-ui, sans-serif;
+  --font-marca: var(--font); --font-display: var(--font);
+  --mono: 'IBM Plex Mono', "Cascadia Mono", Consolas, ui-monospace, monospace;
+  --shadow-pill: 0 1px 2px rgba(14, 17, 22, .08), 0 8px 24px rgba(14, 17, 22, .14);
+  /* papel (claro) */
+  --bg: #F5F5F2; --stage: #E6E6E1; --surface: #FFFFFF; --surface-2: #FAFAF8; --surface-3: #ECECE7; --line: #DEDED8; --line-forte: #C9C9C2;
+  --text: #0E1116; --text-dim: #3A404A; --text-faint: #5E6570;
+  --accent: #1B3A66; --accent-hover: #142D50; --accent-ink: #FFFFFF; --accent-soft: #EEF2F8; --sel-linha: #F2F5FA;
+  --page-shadow: 0 1px 2px rgba(14, 17, 22, .12), 0 12px 32px rgba(14, 17, 22, .10);
+  --scroll-thumb: #C9C9C2; --danger: #B3261E; --ok: #1F7A4A; --ok-texto: #1A5E3A; --warn: #3A404A;
+  --g-ambar: #3A404A; --g-azul: #1B3A66; --g-verde: #1F7A4A; --g-roxo: #3A404A; --g-ciano: #1B3A66; --g-laranja: #3A404A; --g-vermelho: #B3261E; --g-indigo: #1B3A66; --g-cinza: #5E6570;
+  --tarja: #0E1116; --tarja-proposta: rgba(14, 17, 22, .72); --tarja-contorno: #6F8FBF;
 }
 :root[data-tema="tinta"] {
-  --bg: #0c1424; --stage: #070d19; --surface: #121c30; --surface-2: #182540; --surface-3: #1f2e4d; --line: #253651;
-  --text: #e6ebf3; --text-dim: #9aa8bd; --text-faint: #7d8ba1;
-  --accent: #7fb0e8; --accent-ink: #0b1526; --accent-soft: rgba(127, 176, 232, .16);
-  --page-shadow: 0 1px 2px rgba(0, 0, 0, .5), 0 10px 30px rgba(0, 0, 0, .45);
-  --scroll-thumb: #34456a; --danger: #e07a72; --ok: #6cba7d; --warn: #e0b04a;
-  --g-ambar: #e0b04a; --g-azul: #7fb0e8; --g-verde: #6cba7d; --g-roxo: #b48be8; --g-ciano: #5fc4c8; --g-laranja: #e8925a; --g-vermelho: #e07a72; --g-indigo: #8f9cf0; --g-cinza: #8a93a3;
-  --tarja: #05080f;
+  --bg: #111418; --stage: #0B0D10; --surface: #171B21; --surface-2: #1D222A; --surface-3: #252B35; --line: #2C333E; --line-forte: #3A4250;
+  --text: #ECEDEA; --text-dim: #B6BCC5; --text-faint: #8A919C;
+  --accent: #8FB2E6; --accent-hover: #A9C4EE; --accent-ink: #0E1116; --accent-soft: rgba(143, 178, 230, .14); --sel-linha: rgba(143, 178, 230, .10);
+  --page-shadow: 0 1px 2px rgba(0, 0, 0, .5), 0 12px 32px rgba(0, 0, 0, .45);
+  --scroll-thumb: #3A4250; --danger: #F08A80; --ok: #5CC08A; --ok-texto: #7FD3A3; --warn: #B6BCC5;
+  --g-ambar: #B6BCC5; --g-azul: #8FB2E6; --g-verde: #5CC08A; --g-roxo: #B6BCC5; --g-ciano: #8FB2E6; --g-laranja: #B6BCC5; --g-vermelho: #F08A80; --g-indigo: #8FB2E6; --g-cinza: #8A919C;
+  --tarja: #000000; --tarja-proposta: rgba(0, 0, 0, .72); --tarja-contorno: #6F8FBF;
 }
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
@@ -43,22 +42,24 @@ a { color: var(--accent); }
 ::selection { background: var(--accent-soft); }
 *::-webkit-scrollbar { width: 10px; height: 10px; }
 *::-webkit-scrollbar-thumb { background: var(--scroll-thumb); border-radius: 99px; border: 2px solid transparent; background-clip: padding-box; }
-.marca { font-family: var(--font-marca); font-weight: 800; font-size: 19px; letter-spacing: -.2px; color: var(--text); text-decoration: none; display: inline-flex; align-items: center; gap: 8px; }
-.marca img { width: 26px; height: 26px; border-radius: 7px; }
-.btn { font: 600 var(--fs-md)/1 var(--font); padding: 8px 14px; border: 1px solid var(--line); border-radius: 999px; background: var(--surface); color: var(--text); cursor: pointer; transition: background var(--fast) var(--ease), border-color var(--fast) var(--ease), transform var(--fast) var(--ease); text-decoration: none; display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }
+.marca { font-family: var(--font-marca); font-weight: 700; font-size: 18px; letter-spacing: -.3px; color: var(--text); text-decoration: none; display: inline-flex; align-items: center; gap: 10px; }
+.marca img { width: 24px; height: 24px; border-radius: 0; }
+.btn { font: 500 var(--fs-md)/1 var(--font); height: 36px; padding: 0 14px; border: 1px solid var(--line-forte); border-radius: var(--radius); background: var(--surface); color: var(--text); cursor: pointer; transition: background var(--fast) var(--ease), border-color var(--fast) var(--ease); text-decoration: none; display: inline-flex; align-items: center; justify-content: center; gap: 8px; white-space: nowrap; }
 .btn:hover { border-color: var(--text-faint); background: var(--surface-2); }
-.btn:active { transform: translateY(1px); }
+.btn:active { transform: none; }
 .btn.primario, .btn.is-primary { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
-.btn.primario:hover { filter: brightness(1.06); }
-.btn.on { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
+.btn.primario:hover { background: var(--accent-hover); border-color: var(--accent-hover); filter: none; }
+.btn.on { background: var(--text); border-color: var(--text); color: var(--surface); }
+.btn.fantasma { border-color: transparent; background: transparent; color: var(--text-dim); } .btn.fantasma:hover { background: var(--surface-3); }
+.btn.pequeno { height: 30px; padding: 0 10px; font-size: var(--fs-sm); }
 .btn.perigo { color: var(--danger); }
 .btn[disabled] { opacity: .5; cursor: default; }
-input, select, textarea { font: inherit; padding: 8px 10px; border: 1px solid var(--line); border-radius: var(--r-sm); background: var(--surface); color: var(--text); }
+input, select, textarea { font: inherit; padding: 8px 12px; border: 1px solid var(--line-forte); border-radius: var(--radius); background: var(--surface); color: var(--text); }
 input:focus, select:focus, textarea:focus, .btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
-.mono, code, pre { font-family: var(--mono); font-size: 12.5px; }
-.pill { display: inline-block; font-size: var(--fs-xs); font-weight: 600; padding: 2px 9px; border-radius: 999px; border: 1px solid var(--line); color: var(--text-dim); white-space: nowrap; }
-.pill.ok { background: rgba(61,138,82,.14); color: var(--ok); border-color: transparent; }
-.pill.warn { background: rgba(176,122,18,.14); color: var(--warn); border-color: transparent; }
-.pill.crit { background: rgba(184,84,63,.14); color: var(--danger); border-color: transparent; }
-.pill.acc { background: var(--accent-soft); color: var(--accent); border-color: transparent; }
-.tarja { display: inline-block; width: 22px; height: 12px; background: var(--tarja); border-radius: 3px; vertical-align: -1px; }
+.mono, code, pre { font-family: var(--mono); font-size: 13px; }
+.pill { display: inline-flex; align-items: center; gap: 6px; font-size: var(--fs-xs); font-weight: 600; padding: 0 8px; height: 22px; border-radius: var(--r-sm); border: 1px solid var(--line); color: var(--text-dim); white-space: nowrap; background: var(--surface); }
+.pill.ok { color: var(--ok-texto); border-color: transparent; background: none; padding-left: 0; }
+.pill.warn { color: var(--text); border-color: transparent; background: none; padding-left: 0; }
+.pill.crit { color: var(--danger); border-color: transparent; background: none; padding-left: 0; }
+.pill.acc { color: var(--accent); border-color: transparent; background: none; padding-left: 0; }
+.tarja { display: inline-block; width: 22px; height: 12px; background: var(--tarja); border-radius: 1px; vertical-align: -1px; }

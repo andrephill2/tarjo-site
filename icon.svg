@@ -1,23 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
-  <!-- Tarjo: folha branca sobre azul-marinho; o T da marca é a própria tarja (barra) sobre uma haste de texto. -->
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="0.4" y2="1"><stop offset="0" stop-color="#27508a"/><stop offset="1" stop-color="#132a4f"/></linearGradient>
-    <linearGradient id="page" x1="0.2" y1="0" x2="0.8" y2="1"><stop offset="0" stop-color="#ffffff"/><stop offset="1" stop-color="#e8edf5"/></linearGradient>
-    <filter id="sombra" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="10" stdDeviation="10" flood-color="#06101f" flood-opacity=".45"/></filter>
-  </defs>
-  <rect width="512" height="512" rx="112" fill="url(#bg)"/>
-  <g filter="url(#sombra)">
-    <path d="M148 88h158l70 70v246a22 22 0 0 1-22 22H148a22 22 0 0 1-22-22V110a22 22 0 0 1 22-22z" fill="url(#page)"/>
-    <path d="M306 88v52a18 18 0 0 0 18 18h52z" fill="#c9d3e3"/>
-  </g>
-  <!-- linhas de texto -->
-  <g fill="#b7c2d4">
-    <rect x="164" y="172" width="86" height="14" rx="7"/>
-    <rect x="164" y="318" width="176" height="14" rx="7"/>
-    <rect x="164" y="352" width="132" height="14" rx="7"/>
-    <rect x="164" y="386" width="156" height="14" rx="7"/>
-  </g>
-  <!-- o T: barra (tarja) + haste -->
-  <rect x="158" y="210" width="196" height="46" rx="10" fill="#10161f"/>
-  <rect x="232" y="256" width="48" height="112" rx="10" fill="#10161f"/>
+  <!-- Tarjo: marinho chapado, folha branca; o T da marca é a própria tarja. -->
+  <rect width="512" height="512" rx="96" fill="#1B3A66"/>
+  <path d="M148 88h158l70 70v246a22 22 0 0 1-22 22H148a22 22 0 0 1-22-22V110a22 22 0 0 1 22-22z" fill="#FFFFFF"/>
+  <path d="M306 88v52a18 18 0 0 0 18 18h52z" fill="#C9D3E3"/>
+  <rect x="158" y="210" width="196" height="46" rx="6" fill="#0E1116"/>
+  <rect x="232" y="256" width="48" height="112" rx="6" fill="#0E1116"/>
 </svg>

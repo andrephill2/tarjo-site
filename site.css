@@ -1,5 +1,5 @@
 /* Tarjo — site (nova direção, 25/09/2026): tinta, papel e linha; marinho só na ação principal; a tarja é o único recurso gráfico. */
-@import url(base.css);
+@import url(base.css?v=2a0f86f8);
 html { scroll-behavior: smooth; }
 body { background: var(--surface); color: var(--text); font: 15px/1.55 var(--font); overflow-x: hidden; }
 a { color: var(--accent); } a:hover { color: var(--accent-hover); }

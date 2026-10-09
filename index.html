@@ -8,7 +8,7 @@
 <link rel="icon" href="icon.svg" type="image/svg+xml">
 <meta property="og:title" content="Tarjo — tarjamento definitivo de dados pessoais">
 <meta property="og:description" content="Remoção real, verificação por extração e laudo assinado, para órgãos que publicam documentos pela LAI e cumprem a LGPD.">
-<link rel="stylesheet" href="site.css?v=2a0f86f8">
+<link rel="stylesheet" href="site.css?v=62d23b9d">
 </head>
 <body>
 
@@ -22,27 +22,26 @@
   <a class="btn primario" href="#contato">Agendar demonstração</a>
 </header>
 
+<main>
 <section class="hero">
-  <img class="hero-foto" src="screens/processos.jpg" alt="Pilhas de processos em papel numa repartição">
+  <img class="hero-foto" src="screens/revisao-humana.webp" alt="Cena ilustrativa de uma profissional revisando documentos no escritório" fetchpriority="high" width="1536" height="1024">
   <div class="hero-txt">
-    <div class="hero-pre">Para órgãos públicos · LAI e LGPD</div>
-    <h1><span>Tarjamento definitivo</span><span>de dados pessoais.</span></h1>
-    <p>O Tarjo localiza CPF, nome, endereço, rosto, assinatura e QR Code nos documentos que o órgão precisa publicar. Sua equipe confere, e o arquivo sai limpo, pesquisável e com laudo assinado.</p>
-    <div class="hero-acoes"><a class="btn primario grande" href="#contato">Agendar demonstração</a><a class="btn grande" href="#verificacao">Ver os testes públicos</a></div>
+    <div class="hero-pre">Proteção de dados para órgãos públicos</div>
+    <h1>Publique documentos.<br><span>Proteja os<br>dados pessoais.</span></h1>
+    <p>O Tarjo identifica os dados pessoais. Sua equipe revisa. O documento sai tarjado e verificado.</p>
+    <div class="hero-acoes"><a class="btn primario grande" href="#demonstracao"><span aria-hidden="true">▶</span> Ver o Tarjo funcionando</a><a class="btn grande" href="#contato">Agendar demonstração</a></div>
+    <small>PDF, Word, planilhas e vídeo</small>
   </div>
-  <div class="hero-doc" aria-label="Exemplo de documento tratado">
-    <div class="hd-cab"><span class="hd-nome">Processo 073/2026, vista ao requerente.pdf</span><span class="hd-st"><i></i>Verificado</span></div>
-    <div class="hd-corpo">
-      <div class="doc b">PROCESSO ADMINISTRATIVO Nº 073/2026</div>
-      <div class="doc">Requerente: <span class="tj" style="width: 170px"></span>, CPF <span class="tj" style="width: 96px"></span></div>
-      <div class="doc">Telefone <span class="tj" style="width: 100px"></span>, residente na <span class="tj" style="width: 150px"></span></div>
-      <div class="doc">Sede do órgão: SIBS Quadra 02, Conjunto A, Lote 03, Brasília/DF</div>
+  <div class="hero-produto" aria-label="Prévia ilustrativa da revisão de documentos">
+    <div class="preview-cab"><b><img src="icon.svg" alt=""> Tarjo</b><span>Revisão de dados</span></div>
+    <div class="preview-corpo">
+      <div class="preview-lista"><b>Dados encontrados <span>3</span></b><div>Nome <em>Pendente</em></div><div>CPF <em>Pendente</em></div><div>Endereço <em class="confirmado">Confirmado</em></div></div>
+      <div class="preview-pagina"><b>PROCESSO ADMINISTRATIVO<br>Nº 073/2026</b><p>Requerente: <mark>Maria de Souza</mark></p><p>CPF: <mark>000.000.000-00</mark></p><p>Residente na <span class="tj" style="width:120px" aria-label="endereço removido"></span></p><div class="linhas"></div><div class="linhas curta"></div><div class="linhas"></div></div>
     </div>
-    <div class="hd-pe"><span>4 dados removidos</span><span>Endereço do órgão mantido</span><span class="mono">fef386… → 0718b9…</span></div>
+    <div class="preview-pe"><span>✓ Arquivo verificado</span><small>Exemplo com dados fictícios</small></div>
   </div>
-  <div class="credito">foto: Wesley Tingey / Unsplash</div>
+  <div class="credito">Imagem ilustrativa gerada por IA</div>
 </section>
-
 <div class="faixa">
   <span class="forte">Desenvolvido no Brasil</span>
   <span>Instalação no servidor do órgão ou em nuvem dedicada</span>
@@ -58,11 +57,22 @@
 
 <section class="bloco" id="como">
   <div class="sec"><i></i>Como funciona</div>
-  <h2 class="h2">Do pedido de acesso à resposta, em três etapas.</h2>
+  <h2 class="h2">Do envio à publicação, em três etapas.</h2>
   <div class="etapas">
-    <div><div class="mono n">01</div><h3>Envio</h3><p>Pela tela, pela API, em lote ou direto do Drive e do OneDrive. Documentos digitalizados são endireitados e passam por OCR automaticamente.</p></div>
-    <div><div class="mono n">02</div><h3>Revisão</h3><p>As tarjas chegam sugeridas, cada uma com o motivo da marcação e a pessoa a que pertence. A equipe confirma, descarta ou aplica a todo o documento.</p></div>
-    <div><div class="mono n">03</div><h3>Entrega</h3><p>O Tarjo remove, verifica e gera o PDF ou PDF/A com o laudo. O arquivo pode ser baixado, enviado por e-mail ou publicado em link com prazo de validade.</p></div>
+    <div><div class="mono n">01</div><h3>Envie</h3><p>Pela tela, pela API, em lote ou direto do Drive e do OneDrive. Documentos digitalizados são endireitados e passam por OCR automaticamente.</p></div>
+    <div><div class="mono n">02</div><h3>Revise</h3><p>As tarjas chegam sugeridas, cada uma com o motivo da marcação e a pessoa a que pertence. A equipe confirma, descarta ou aplica a todo o documento.</p></div>
+    <div><div class="mono n">03</div><h3>Gere o PDF</h3><p>O Tarjo remove, verifica e gera o PDF ou PDF/A com o laudo. O arquivo pode ser baixado, enviado por e-mail ou publicado em link com prazo de validade.</p></div>
+  </div>
+</section>
+
+<section class="bloco demo" id="demonstracao" aria-labelledby="demo-titulo">
+  <div class="sec"><i></i>Veja na prática</div>
+  <h2 class="h2" id="demo-titulo">O documento muda. A informação pública permanece.</h2>
+  <p class="lead">Compare um exemplo antes e depois do tarjamento. Os dados abaixo são fictícios.</p>
+  <div class="demo-botoes" role="group" aria-label="Versão do exemplo"><button class="btn" data-versao="original" aria-pressed="false">Ver original</button><button class="btn primario" data-versao="tarjado" aria-pressed="true">Ver tarjado</button></div>
+  <div class="demo-documento" data-tarjado="true">
+    <div class="demo-papel"><small>EXEMPLO ILUSTRATIVO · PROCESSO 073/2026</small><h3>Pedido de acesso à informação</h3><p>Requerente: <span class="dado">Maria de Souza</span></p><p>CPF: <span class="dado">000.000.000-00</span></p><p>Solicito acesso ao relatório de execução dos serviços públicos referentes ao exercício de 2026.</p><p>Órgão responsável: Secretaria de Administração.</p></div>
+    <div class="demo-explica"><span class="demo-selo">✓ Dados pessoais protegidos</span><h3>Você decide o que será removido.</h3><p>O Tarjo sugere as marcações, sua equipe confere e o arquivo é verificado antes da publicação.</p><a class="btn primario" href="#contato">Agendar demonstração</a></div>
   </div>
 </section>
 
@@ -139,17 +149,19 @@
     <label>E-mail institucional <input name="email" type="email" required></label>
     <label class="full">Órgão ou empresa <input name="orgao"></label>
     <label class="full">Mensagem <textarea name="mensagem" rows="3" placeholder="Ex.: somos um conselho regional e precisamos tarjar processos éticos para vista"></textarea></label>
-    <div class="full"><button class="btn primario grande" type="submit">Enviar</button> <span id="formMsg"></span></div>
+    <div class="full"><button class="btn primario grande" type="submit">Agendar demonstração</button> <span id="formMsg"></span></div>
   </form>
 </section>
 
+</main>
 <footer class="rod">
   <span class="forte">Tarjo</span><span>Software brasileiro, feito em Brasília</span>
   <div class="esp"></div>
-  <a class="nl" href="#seguranca">Segurança</a><a class="nl" href="#verificacao">Verificação</a><a class="nl" href="https://app.tarjo.com.br/entrar">Entrar</a><a class="nl" href="mailto:contato@tarjo.com.br">contato@tarjo.com.br</a>
+  <a class="nl" href="https://app.tarjo.com.br/privacidade">Privacidade</a><a class="nl" href="https://app.tarjo.com.br/termos">Termos</a><a class="nl" href="#seguranca">Segurança</a><a class="nl" href="#verificacao">Verificação</a><a class="nl" href="https://app.tarjo.com.br/entrar">Entrar</a><a class="nl" href="mailto:contato@tarjo.com.br">contato@tarjo.com.br</a>
 </footer>
 
 <script>
+document.querySelectorAll('[data-versao]').forEach((b) => b.addEventListener('click', () => { const tarjado = b.dataset.versao === 'tarjado'; document.querySelector('.demo-documento').dataset.tarjado = String(tarjado); document.querySelectorAll('[data-versao]').forEach((a) => { const ativo = a === b; a.setAttribute('aria-pressed', String(ativo)); a.classList.toggle('primario', ativo); }); document.querySelector('.demo-selo').textContent = tarjado ? '✓ Dados pessoais protegidos' : 'Documento original · dados fictícios'; }));
 const grid = document.getElementById('labGrid');
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
 let TESTES = [];

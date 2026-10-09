@@ -1,5 +1,5 @@
 /* Tarjo — site (nova direção, 25/09/2026): tinta, papel e linha; marinho só na ação principal; a tarja é o único recurso gráfico. */
-@import url(base.css?v=2a0f86f8);
+@import url(base.css?v=62d23b9d);
 html { scroll-behavior: smooth; }
 body { background: var(--surface); color: var(--text); font: 15px/1.55 var(--font); overflow-x: hidden; }
 a { color: var(--accent); } a:hover { color: var(--accent-hover); }
@@ -135,3 +135,51 @@ a { color: var(--accent); } a:hover { color: var(--accent-hover); }
   .form { grid-template-columns: 1fr; }
   .contratar h2 { font-size: 24px; }
 }
+
+/* Abertura com contexto humano e prévia de revisão. */
+.cab { padding-inline: max(24px, calc((100vw - 1320px)/2)); gap:24px; }
+.cab .marca { font-size:28px; } .cab .marca img { width:30px;height:30px; }
+.cab-nav { gap:22px; margin-left:18px; }
+.hero { height:660px; background:#f8f7f3; }
+.hero-foto { left:34%;width:66%;object-position:60% 35%; }
+.hero::after { content:'';position:absolute;inset:0;background:linear-gradient(90deg,#f8f7f3 0%,#f8f7f3 27%,rgba(248,247,243,.94) 36%,rgba(248,247,243,.05) 65%);pointer-events:none; }
+.hero-txt { left:max(32px,calc((100vw - 1320px)/2));top:76px;width:51%;max-width:670px; }
+.hero-pre { text-transform:uppercase;letter-spacing:2px;font-size:12px;color:var(--accent); }
+.hero h1 { display:block;font-size:clamp(42px,4.1vw,62px);letter-spacing:-2px;line-height:1.07;margin-top:26px; }
+.hero h1 span { padding:0;background:none;color:#123969; }
+.hero-txt p { max-width:500px;font-size:19px;margin-top:24px; }
+.hero-acoes { margin-top:26px;gap:12px; } .hero-acoes .btn { height:52px;padding-inline:20px; }
+.hero-txt small { margin-top:14px;color:var(--text-faint); }
+.hero-produto { position:absolute;right:max(30px,calc((100vw - 1320px)/2));bottom:52px;width:450px;z-index:3;border:1px solid #dce1e9;border-radius:12px;background:white;box-shadow:0 20px 60px #142d5033;overflow:hidden;color:#18243b; }
+.preview-cab { display:flex;align-items:center;justify-content:space-between;padding:14px 18px;border-bottom:1px solid #e7eaf0;font-size:12px; }
+.preview-cab b { display:flex;gap:6px;align-items:center;font-size:20px; } .preview-cab img { width:20px;height:20px; }
+.preview-corpo { display:grid;grid-template-columns:42% 58%;padding:12px;background:#f6f8fb;gap:10px; }
+.preview-lista { font-size:11px; padding-right:10px; }
+.preview-lista>b { display:flex;justify-content:space-between;margin-bottom:14px; }
+.preview-lista>div { display:flex;justify-content:space-between;align-items:center;padding:14px 8px;border:1px solid #e0e5ed;background:white;border-radius:6px;margin-bottom:8px;gap:6px; }
+.preview-lista em { font-style:normal;font-size:9px;background:#fff0cd;color:#815710;padding:3px 5px;border-radius:4px; }.preview-lista em.confirmado { background:#dbf1e4;color:#24653c; }
+.preview-pagina { background:white;border:1px solid #e4e7ed;padding:18px 12px;box-shadow:0 2px 8px #142d5010;font:11px/1.7 Arial,sans-serif; }
+.preview-pagina>b { font-size:10px; }.preview-pagina p { margin:12px 0; }.preview-pagina mark { background:#fff0cd; }.preview-pagina .tj { max-width:55%;height:12px; }
+.linhas { height:5px;background:#e3e6eb;margin-top:10px; }.linhas.curta { width:72%; }
+.preview-pe { display:flex;align-items:center;justify-content:space-between;padding:12px 14px;font-size:11px;gap:8px; }.preview-pe>span { color:#24653c;font-weight:600; }.preview-pe small { color:#687184;font-size:10px; }
+.credito { color:#3a404a;background:#ffffffdf;font-size:10px; }
+.faixa { font-size:13px;gap:12px 28px; }
+.pilares h3 { color:var(--accent); }
+.etapas { gap:24px; }.etapas>div { border:1px solid var(--line);padding:26px;border-radius:10px;background:var(--surface-2); }.etapas .n { color:var(--accent);font-weight:600; }
+.demo { background:#f7f9fc;scroll-margin-top:90px; }.demo .h2 { max-width:900px; }.demo-botoes { display:flex;gap:10px;margin:26px 0; }
+.demo-documento { display:grid;grid-template-columns:1.15fr 1fr;gap:60px;align-items:center;max-width:1050px; }.demo-papel { background:white;border:1px solid #dce1e9;box-shadow:0 14px 40px #142d5010;padding:36px;font:16px/1.7 Arial,sans-serif; }.demo-papel small { font-size:10px;color:#687184; }.demo-papel h3 { font-size:20px; }.demo-papel .dado { padding:2px 5px; }
+.demo-documento[data-tarjado="true"] .dado { background:#0e1116;color:transparent;user-select:none; }
+.demo-explica h3 { font-size:26px;line-height:1.2; }.demo-explica p { color:var(--text-dim);font-size:17px; }.demo-selo { display:inline-block;padding:7px 12px;border-radius:5px;background:#e4f2e9;color:#24653c;font-size:13px; }
+@media(min-width:1600px) { .hero-foto { object-position:60% 40%; } }
+@media(max-width:1180px) { .hero { height:640px;padding:0;display:block; }.hero-foto { opacity:1;width:72%;left:28%; }.hero-txt { left:32px;top:64px;width:55%;max-width:none; }.hero h1 { font-size:48px; }.hero-produto { right:24px;bottom:34px;width:380px; }.hero-acoes { max-width:340px; }.hero-acoes .btn { width:100%; }.preview-corpo { grid-template-columns:42% 55%; } }
+@media(max-width:760px) {
+ .cab { padding:0 16px; }.cab .marca { font-size:23px; }.cab .marca img { width:25px;height:25px; }
+ .hero { height:auto;display:flex;flex-direction:column;padding:36px 20px 24px;gap:0; }
+ .hero::after { display:none; }.hero-txt { position:relative;left:auto;top:auto;width:100%;max-width:none; }.hero h1 { font-size:clamp(34px,8vw,50px);letter-spacing:-1.4px; }.hero-pre { font-size:10px;letter-spacing:1.4px; }.hero h1 span { padding:0; }.hero-txt p { font-size:17px;margin-top:20px; }.hero-acoes { max-width:none; }.hero-acoes .btn { width:100%;height:48px; }
+ .hero-foto { display:block;position:relative;left:auto;top:auto;width:calc(100% + 40px);margin:28px -20px 0;height:330px;object-position:60% 30%;opacity:1;order:2; }
+ .hero-produto { position:relative;right:auto;bottom:auto;width:100%;margin-top:-56px;order:3; }.credito { position:relative;right:auto;bottom:auto;display:block;align-self:flex-end;order:4;margin-top:8px;background:none; }
+ .preview-cab { padding:12px; }.preview-corpo { gap:8px;padding:8px;grid-template-columns:42% 55%; }.preview-lista { padding-right:0; }.preview-lista>div { padding:10px 5px;font-size:10px; }.preview-lista em { font-size:8px; }.preview-pagina { padding:12px 8px;font-size:10px; }.preview-pe { padding:10px;font-size:10px; }.preview-pe small { font-size:9px; }
+ .etapas>div { padding:24px; }.demo-documento { grid-template-columns:1fr;gap:20px; }.demo-papel { padding:24px;font-size:14px; }.demo-explica h3 { font-size:23px; }
+}
+@media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
+@media(max-width:380px) { .cab { gap:8px; }.cab .btn { font-size:11px;padding-inline:8px; }.cab .marca { font-size:21px;gap:6px; }.hero-produto { min-width:0; }.preview-lista>div { flex-wrap:wrap; }.preview-pe { flex-wrap:wrap; } }

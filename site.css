@@ -1,5 +1,5 @@
 /* Tarjo — site (nova direção, 25/09/2026): tinta, papel e linha; marinho só na ação principal; a tarja é o único recurso gráfico. */
-@import url(base.css?v=e1cb9ffe);
+@import url(base.css?v=0e3a4068);
 html { scroll-behavior: smooth; }
 body { background: var(--surface); color: var(--text); font: 15px/1.55 var(--font); overflow-x: hidden; }
 a { color: var(--accent); } a:hover { color: var(--accent-hover); }
@@ -185,3 +185,6 @@ a { color: var(--accent); } a:hover { color: var(--accent-hover); }
 }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } }
 @media(max-width:380px) { .cab { gap:8px; }.cab .btn { font-size:11px;padding-inline:8px; }.cab .marca { font-size:21px;gap:6px; }.hero-produto { min-width:0; }.preview-lista>div { flex-wrap:wrap; }.preview-pe { flex-wrap:wrap; } }
+
+.perpetua{display:grid;grid-template-columns:1fr 1fr;gap:36px;padding:32px;margin-top:32px;border:1px solid var(--line);border-radius:18px;background:var(--surface-2)}
+.perpetua h3{font-size:30px;margin:10px 0}.perpetua h4{font-size:19px;margin:0 0 16px}.perpetua li{margin-bottom:12px;line-height:1.6}.perpetua .p-preco{margin:24px 0}.perpetua .p-preco span{display:block;font-size:14px;margin-top:8px}.perpetua p{line-height:1.7}.perpetua .btn{margin-top:12px}@media(max-width:760px){.perpetua{grid-template-columns:1fr;padding:22px;gap:24px}.perpetua .p-preco{font-size:32px}}

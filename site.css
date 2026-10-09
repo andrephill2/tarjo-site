@@ -1,5 +1,5 @@
 /* Tarjo — site (nova direção, 25/09/2026): tinta, papel e linha; marinho só na ação principal; a tarja é o único recurso gráfico. */
-@import url(base.css?v=62d23b9d);
+@import url(base.css?v=e1cb9ffe);
 html { scroll-behavior: smooth; }
 body { background: var(--surface); color: var(--text); font: 15px/1.55 var(--font); overflow-x: hidden; }
 a { color: var(--accent); } a:hover { color: var(--accent-hover); }
@@ -137,6 +137,8 @@ a { color: var(--accent); } a:hover { color: var(--accent-hover); }
 }
 
 /* Abertura com contexto humano e prévia de revisão. */
+.demo-video { display:block;width:100%;max-width:1050px;height:auto;aspect-ratio:16/9;object-fit:contain;background:#0e1116;border-radius:12px;margin-top:30px;box-shadow:0 14px 40px #142d5018; }
+.demo-comparacao { margin-top:52px;font-size:30px; }
 .cab { padding-inline: max(24px, calc((100vw - 1320px)/2)); gap:24px; }
 .cab .marca { font-size:28px; } .cab .marca img { width:30px;height:30px; }
 .cab-nav { gap:22px; margin-left:18px; }
